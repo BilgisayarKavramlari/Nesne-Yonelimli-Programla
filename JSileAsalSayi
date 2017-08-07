@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onload="asalSayi()">
+
+  </body>
+  <script type="text/javascript">
+
+    function asalSayi()
+    {
+
+      var num = new Number();
+      num.sayi = prompt('Bir sayı girin', 'örnek: 23');
+      ifs(num.sayi);
+
+    }
+
+    function ifs(sayi)
+    {
+
+      if ((Number.parseInt(sayi)) || (sayi == 0))
+      {
+        asalKontrol(sayi);
+      }
+      else
+      {
+        alert('Lüften sayı dışında bişey girmeyin!');
+        asalSayi();
+      }
+
+    }
+
+    function asalKontrol(asal)
+    {
+      var say = 0;
+
+      if (asal < 0)
+      {
+        alert('Lütfen pozitif bir tam sayı girin');
+        asalSayi();
+      }
+      else if(asal == 0)
+      {
+        alert('0'+"'a"+' '+'bölünen sayı tanımsızdır');
+        asalSayi();
+      }
+      else
+      {
+        for(i=2; i<asal; i++)
+         {
+          var sonuc = asal % i;
+
+          if(sonuc == 0)
+          {
+            say++;
+          }
+         }
+        if(say == 0)
+        {
+          alert(asal + ' ' + 'sayısı ASALDIR');
+        }
+        else
+        {
+          alert(asal + ' ' + 'sayısı asal DEĞİLDİR');
+        }
+      }
+
+
+    }
+
+  </script>
+</html>
