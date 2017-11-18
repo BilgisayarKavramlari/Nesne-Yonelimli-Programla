@@ -1,0 +1,26 @@
+namespace Proje
+{
+  class MatematikselIslemler
+  {
+    public int sayi1sayi2;
+    public Topla(int _sayi1, int _sayi2)
+    {
+      sayi1 = _sayi1;
+      sayi2 = _sayi2;
+      Yazdir(sayi1+sayi2);
+    }
+  public Cikar(int _sayi1, int _sayi2)
+    {
+      sayi1 = _sayi1;
+      sayi2 = _sayi2;
+      Yazdir(sayi1-sayi2);
+    }
+    private void Yazdir (int sonuc)
+    {
+      MessageBox.Show(sonuc);
+    }
+  }
+}
+
+Kullanımı: 
+MatematikselIslemler mat = new MatematikselIslemler (txtSayi1.ChangeType<int>(), txtSayi2.ChangeType<int>());
